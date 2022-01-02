@@ -1,0 +1,21 @@
+.Post-container{
+    padding-top: 20px;
+}
+.upload{
+    height: 100px;
+    width: 100px;
+   padding: 5rem;
+}
+.upload-icon{
+    bottom: 100%;
+    transform: scale(2);
+    color: royalblue;
+}
+.uploadbtnposition{
+    height: 50vh;
+    width: 50vw;
+    margin: auto;
+    position: fixed;
+    bottom: -20%;
+    left: 70%;
+}

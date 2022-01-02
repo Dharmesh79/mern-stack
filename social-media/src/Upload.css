@@ -1,0 +1,33 @@
+.upload-section{
+    height: 80vh;
+    width: 100vw;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.upload-section form{
+    width: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+}
+textarea{
+    margin-bottom: 12px;
+}
+.btn{
+    background: transparent;
+    background-color: tomato;
+    font-weight: 500;
+    font-size: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: grid;
+    place-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    cursor: pointer;
+}

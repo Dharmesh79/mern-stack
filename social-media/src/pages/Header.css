@@ -1,0 +1,39 @@
+.Header-Container{
+    padding: 0px;
+    position: sticky;
+    top: 0%;
+    z-index: 100;
+}
+.header{
+    display: flex;
+    background-color: rgb(143, 203, 211);
+    align-items: center;
+}
+.header h1{
+    margin-left: 13px;
+}
+.search-input{
+    margin-left: 50px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+}
+.search-input input{
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    width: 50%;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid gray;
+    height: 20px;
+}
+.search-input input:focus{
+    outline: none;
+}
+.social-icons{
+    margin-right: 20px;
+}
+#btn{
+    cursor: pointer;
+}
