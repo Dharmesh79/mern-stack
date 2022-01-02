@@ -7,7 +7,7 @@
   "scripts": {
     "start dev": "nodemon --experimental-modules --es-module-specifier-resolution=node index.js",
     "start": "node --experimental-modules --es-module-specifier-resolution=node index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -23,3 +23,6 @@
     "nodemon": "^2.0.15"
   }
 }
+
+
+
