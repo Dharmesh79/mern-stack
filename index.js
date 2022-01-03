@@ -12,7 +12,9 @@ const apps = express()
 apps.use(cors())
 apps.use(express.json({limit: '50mb'}));
 apps.use(express.urlencoded({limit: '50mb'}));
-console.log(process.env.Databaseurl)
+
+apps.use(express.static(path.join(__dirname, "./social-media/build")));
+
 mongoose.connect(`${process.env.Databaseurl}`,
  {
    useNewUrlParser: true, 
@@ -32,7 +34,7 @@ apps.get('/', async (req, res) => {
           console.log("error")
       }
       else{
-        console.log(req.params.id)
+       
           res.status(200).send(data)
       }
   })
@@ -78,9 +80,7 @@ const updatedStudent = await User.findByIdAndRemove(request.params.id);
   }
 
 })
-if(process.env.NODE_ENV=="production"){
-apps.use(express.static("social-media/build"))
-}
+
 const port = process.env.PORT || 8210;
 
 
