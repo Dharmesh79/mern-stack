@@ -13,7 +13,7 @@ apps.use(cors())
 apps.use(express.json({limit: '50mb'}));
 apps.use(express.urlencoded({limit: '50mb'}));
 
-apps.use(express.static(path.join(__dirname, "./social-media/build")));
+
 
 mongoose.connect(`${process.env.Databaseurl}`,
  {
@@ -80,6 +80,14 @@ const updatedStudent = await User.findByIdAndRemove(request.params.id);
   }
 
 })
+if(process.env.NODE_ENV === 'production'){    
+  apps.use(express.static(path.join(__dirname, "./social-media/build"))); // set static folder 
+  //returning frontend for any route other than api 
+  app.get('*',(req,res)=>{     
+      res.sendFile (path.resolve(__dirname,'social-media','build',         
+                    'index.html' ));    
+  });
+}
 
 const port = process.env.PORT || 8210;
 
